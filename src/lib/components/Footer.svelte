@@ -79,7 +79,7 @@
 		</div>
 		<!-- Copyright Notice -->
 		<p class="text-sm text-gray-500 dark:text-gray-400">
-			© {new Date().getFullYear()} Core Labs. All rights reserved.
+			© {new Date().getFullYear()} Jan-Edward. All rights reserved.
 		</p>
 	</div>
 </footer>

@@ -22,12 +22,12 @@
 	class="navbar bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-3 text-white shadow-lg backdrop-blur-md md:px-8"
 >
 	<div class="flex flex-1 items-center">
-		<img
+		<!-- <img
 			src="/logos/core-labs-logo-sm.png"
 			alt="Core Labs Logo"
 			class="mr-2 h-12 w-10 object-contain"
 		/>
-		<a href="/" class="text-2xl font-bold tracking-tight">Core Labs</a>
+		<a href="/" class="text-3xl font-bold tracking-tight">Jan-Edward</a> -->
 	</div>
 
 	<div class="hidden space-x-6 md:flex">

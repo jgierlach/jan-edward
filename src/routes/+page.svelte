@@ -77,15 +77,19 @@
 >
 	<div class="max-w-4xl text-center">
 		<!-- Title -->
-		<h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-			🚀 Build and scale with proven strategies
-		</h1>
+		<!-- <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">Jan-Edward</h1> -->
+
+		<!-- <h2 class="mt-4 text-3xl">[YON-ed-werd]</h2> -->
+
+		<h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">Jan-Edward</h1>
+		<p
+			class="mt-4 inline-block rounded-full bg-white/10 px-4 py-1 text-2xl font-semibold text-gray-100"
+		>
+			<span class="text-indigo-200">[YON-ed-werd]</span>
+		</p>
 
 		<!-- Subtitle -->
-		<p class="mt-6 text-lg text-gray-200 sm:text-xl">
-			We help business owners sell more, reduce costs, ship more, and stress less. No fluff. Just
-			results.
-		</p>
+		<p class="mt-6 text-3xl text-gray-200 sm:text-3xl">Fullstack developer and business owner</p>
 
 		<!-- CTA Buttons -->
 		<div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -111,13 +115,13 @@
 	</div>
 
 	<!-- Floating Image -->
-	<div class="absolute right-12 top-16 hidden md:block">
+	<!-- <div class="absolute right-12 top-16 hidden md:block">
 		<img
 			src="/logos/core-labs-logo-sm.png"
 			alt="Core Labs"
 			class="animate-float h-24 w-24 opacity-90 drop-shadow-lg"
 		/>
-	</div>
+	</div> -->
 </section>
 
 <!-- ABOUT SECTION BEGINS -->
@@ -126,9 +130,9 @@
 	id="about"
 >
 	<div class="container mx-auto flex flex-col items-center space-y-12 px-6">
-		<h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl dark:text-white">
+		<!-- <h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl dark:text-white">
 			Why should you care what I have to say?
-		</h2>
+		</h2> -->
 		<div class="space-y-4 text-left">
 			<p class="mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
 				Hello 👋, my name is <span class="font-semibold text-gray-800 dark:text-white"
@@ -594,7 +598,7 @@
 			</a>
 
 			<!-- Instagram -->
-			<a
+			<!-- <a
 				href="https://instagram.com/"
 				target="_blank"
 				class="group flex h-16 w-16 items-center justify-center rounded-full bg-white/70 p-4 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:bg-pink-500"
@@ -608,7 +612,7 @@
 						d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0-2A7.5 7.5 0 0 0 0 7.5v9A7.5 7.5 0 0 0 7.5 24h9A7.5 7.5 0 0 0 24 16.5v-9A7.5 7.5 0 0 0 16.5 0h-9z"
 					></path>
 				</svg>
-			</a>
+			</a> -->
 
 			<!-- LinkedIn -->
 			<a
