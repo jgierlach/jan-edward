@@ -65,10 +65,10 @@
 </script>
 
 <svelte:head>
-	<title>Core Labs</title>
+	<title>Jan-Edward</title>
 	<meta
 		property="description"
-		content="Core Labs | The team to bring your next application to life"
+		content="Jan-Edward | The personal website of Jan-Edward, fullstack developer, and business owner."
 	/>
 </svelte:head>
 
