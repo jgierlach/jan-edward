@@ -13,9 +13,6 @@
 	function isActive(path, hash = '') {
 		return page.url.pathname === path && (!hash || page.url.hash === hash);
 	}
-
-	// style="background: #10263b;"
-	// style = 'background: #0e2439';
 </script>
 
 <nav

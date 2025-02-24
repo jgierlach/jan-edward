@@ -77,10 +77,6 @@
 >
 	<div class="max-w-4xl text-center">
 		<!-- Title -->
-		<!-- <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">Jan-Edward</h1> -->
-
-		<!-- <h2 class="mt-4 text-3xl">[YON-ed-werd]</h2> -->
-
 		<h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">Jan-Edward</h1>
 		<p
 			class="mt-4 inline-block rounded-full bg-white/10 px-4 py-1 text-2xl font-semibold text-gray-100"
