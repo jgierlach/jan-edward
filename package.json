@@ -35,6 +35,7 @@
 	},
 	"dependencies": {
 		"@stripe/stripe-js": "^5.6.0",
+		"@vercel/analytics": "^1.5.0",
 		"gray-matter": "^4.0.3",
 		"marked": "^15.0.7",
 		"stripe": "^17.6.0"
