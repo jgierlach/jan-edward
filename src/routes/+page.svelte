@@ -2,6 +2,7 @@
 	import { PUBLIC_STRIPE_KEY } from '$env/static/public';
 	import { loadStripe } from '@stripe/stripe-js';
 
+	let { data } = $props(); // Use $props() instead of export let
 	const COACHING_CALL_PRICE_ID = 'price_1Qn5vrRwAkKhSEhM28Lg4EEu';
 
 	async function checkout() {
@@ -174,10 +175,10 @@
 			<p class="mx-auto max-w-3xl text-left text-lg text-gray-600 sm:text-xl dark:text-gray-400">
 				<span class="font-semibold text-gray-800 dark:text-white"
 					>So why should this matter to you?</span
-				> Because I’ve built and scaled businesses from the ground up, I know what works (and what doesn’t).
-				Whether it’s digital products, eCommerce, or automation-driven growth strategies, I’ve tested,
+				> Because I've built and scaled businesses from the ground up, I know what works (and what doesn't).
+				Whether it's digital products, eCommerce, or automation-driven growth strategies, I've tested,
 				optimized, and refined systems that drive real results. If you're looking for actionable insights,
-				no-fluff strategies, and the lessons I’ve learned along the way, you’re in the right place.
+				no-fluff strategies, and the lessons I've learned along the way, you're in the right place.
 			</p>
 		</div>
 	</div>
@@ -346,77 +347,38 @@
 
 		<!-- Blog Cards Grid -->
 		<div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-			<!-- Blog Card 1 -->
-			<div
-				class="card bg-white shadow-xl transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
-			>
-				<figure>
-					<img
-						src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
-						alt="Blog Image"
-						class="rounded-t-xl"
-					/>
-				</figure>
-				<div class="card-body">
-					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						The Future of Web Development
-					</h3>
-					<p class="text-gray-600 dark:text-gray-300">
-						Discover the latest trends in web development and how they shape the future.
-					</p>
-					<div class="mt-4">
-						<a href="#" class="btn btn-primary w-full">Read More 📖</a>
+			{#each data.latestPosts as post}
+				<div
+					class="card bg-white shadow-xl transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
+				>
+					<figure>
+						<img
+							src={post.headerImage ||
+								'https://archive.org/download/placeholder-image/placeholder-image.jpg'}
+							alt={post.title}
+							class="h-48 w-full rounded-t-xl object-cover"
+						/>
+					</figure>
+					<div class="card-body p-6">
+						<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+							{post.title}
+						</h3>
+						<time class="mt-2 block text-sm text-gray-500 dark:text-gray-400">
+							{new Date(post.date).toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+						</time>
+						<p class="text-gray-600 dark:text-gray-300">
+							{post.description}
+						</p>
+						<div class="mt-4">
+							<a href="/blog/{post.slug}" class="btn btn-primary w-full">Read More 📖</a>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<!-- Blog Card 2 -->
-			<div
-				class="card bg-white shadow-xl transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
-			>
-				<figure>
-					<img
-						src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
-						alt="Blog Image"
-						class="rounded-t-xl"
-					/>
-				</figure>
-				<div class="card-body">
-					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						Scaling Your Online Business
-					</h3>
-					<p class="text-gray-600 dark:text-gray-300">
-						Learn proven strategies to grow and scale your e-commerce business effectively.
-					</p>
-					<div class="mt-4">
-						<a href="#" class="btn btn-primary w-full">Read More 📖</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Blog Card 3 -->
-			<div
-				class="card bg-white shadow-xl transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
-			>
-				<figure>
-					<img
-						src="https://archive.org/download/placeholder-image/placeholder-image.jpg"
-						alt="Blog Image"
-						class="rounded-t-xl"
-					/>
-				</figure>
-				<div class="card-body">
-					<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-						How to Build a SaaS Product
-					</h3>
-					<p class="text-gray-600 dark:text-gray-300">
-						Step-by-step guide on building and launching a profitable SaaS product.
-					</p>
-					<div class="mt-4">
-						<a href="#" class="btn btn-primary w-full">Read More 📖</a>
-					</div>
-				</div>
-			</div>
+			{/each}
 		</div>
 	</div>
 </section>
