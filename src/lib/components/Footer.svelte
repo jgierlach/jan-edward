@@ -7,18 +7,20 @@
 		<div
 			class="mb-8 flex flex-wrap justify-center space-x-6 text-lg font-medium text-gray-700 dark:text-gray-300"
 		>
-			<a href="#about" class="transition hover:text-indigo-500 dark:hover:text-indigo-400">About</a>
-			<a href="#our-businesses" class="transition hover:text-indigo-500 dark:hover:text-indigo-400"
+			<a href="/#about" class="transition hover:text-indigo-500 dark:hover:text-indigo-400">About</a
+			>
+			<a href="/#our-businesses" class="transition hover:text-indigo-500 dark:hover:text-indigo-400"
 				>Businesses</a
 			>
 			<a
-				href="#help-your-business"
+				href="/#help-your-business"
 				class="transition hover:text-indigo-500 dark:hover:text-indigo-400">Services</a
 			>
-			<a href="#connect-socials" class="transition hover:text-indigo-500 dark:hover:text-indigo-400"
-				>Socials</a
+			<a
+				href="/#connect-socials"
+				class="transition hover:text-indigo-500 dark:hover:text-indigo-400">Socials</a
 			>
-			<a href="#contact" class="transition hover:text-indigo-500 dark:hover:text-indigo-400"
+			<a href="/#contact" class="transition hover:text-indigo-500 dark:hover:text-indigo-400"
 				>Contact</a
 			>
 		</div>
