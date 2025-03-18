@@ -4,6 +4,25 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Blog Posts | Jan-Edward</title>
+	<meta
+		name="description"
+		content="Read the latest blog posts about technology, personal experiences, and interesting discoveries."
+	/>
+	<meta property="og:title" content="Blog Posts | Jan-Edward" />
+	<meta
+		property="og:description"
+		content="Read the latest blog posts about technology, personal experiences, and interesting discoveries."
+	/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Blog Posts | Jan-Edward" />
+	<meta
+		name="twitter:description"
+		content="Read the latest blog posts about technology, personal experiences, and interesting discoveries."
+	/>
+</svelte:head>
+
 <section
 	class="bg-gradient-to-b from-gray-50 to-gray-100 py-20 dark:from-gray-900 dark:to-gray-800"
 >
