@@ -1,4 +1,4 @@
-import { getAllPosts } from '$lib/blog/utils';
+import { getAllPosts } from '$lib/posts/utils';
 
 export function load() {
 	const posts = getAllPosts();

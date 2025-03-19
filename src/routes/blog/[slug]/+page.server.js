@@ -1,4 +1,4 @@
-import { getPost } from '$lib/blog/utils';
+import { getPost } from '$lib/posts/utils';
 import { error } from '@sveltejs/kit';
 
 export function load({ params }) {

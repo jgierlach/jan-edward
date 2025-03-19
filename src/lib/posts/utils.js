@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
-const POSTS_DIR = 'src/lib/blog';
+const POSTS_DIR = 'src/lib/posts';
 
 export function getAllPosts() {
 	const files = fs.readdirSync(POSTS_DIR);
