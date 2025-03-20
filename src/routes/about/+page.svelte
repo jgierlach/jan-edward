@@ -64,7 +64,7 @@
 		<!-- Image with Caption -->
 		<div class="flex flex-col items-center space-y-4">
 			<img
-				src="/continental-divide.jpg"
+				src="/continental-divide.JPG"
 				alt="Continental Divide"
 				class="max-w-full rounded-lg object-cover shadow-lg sm:max-w-lg lg:max-w-2xl"
 			/>
