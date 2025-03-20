@@ -103,7 +103,7 @@
 				🚀 See My Work
 			</a>
 			<a
-				href="#latest-videos"
+				href="#latest-blogs"
 				class="w-full rounded-lg bg-white px-6 py-3 text-lg font-medium text-indigo-600 shadow-lg transition-transform hover:scale-105 sm:w-auto"
 			>
 				🎥 See My Content
