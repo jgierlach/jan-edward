@@ -56,7 +56,7 @@
 							{post.description}
 						</p>
 						<div class="mt-4">
-							<a href="/blog/{post.slug}" class="btn btn-primary w-full">Read More 📖</a>
+							<a href="/posts/{post.slug}" class="btn btn-primary w-full">Read More 📖</a>
 						</div>
 					</div>
 				</div>

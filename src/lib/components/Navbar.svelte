@@ -34,9 +34,9 @@
 			class:btn-active={isActive('/', '#about')}>About</a
 		>
 		<a
-			href="/blog"
+			href="/posts"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/blog', '/blog')}>Blog</a
+			class:btn-active={isActive('/posts', '/posts')}>Blog</a
 		>
 		<a
 			href="/#our-businesses"
@@ -86,9 +86,9 @@
 			class:btn-active={isActive('/', '#about')}>About</a
 		>
 		<a
-			href="/blog"
+			href="/posts"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/blog', '/blog')}>Blog</a
+			class:btn-active={isActive('/posts', '/posts')}>Blog</a
 		>
 		<a
 			href="/#our-businesses"
