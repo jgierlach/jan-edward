@@ -552,8 +552,8 @@
 			</a>
 
 			<!-- Instagram -->
-			<!-- <a
-				href="https://instagram.com/"
+			<a
+				href="https://www.instagram.com/historical_outliers/"
 				target="_blank"
 				class="group flex h-16 w-16 items-center justify-center rounded-full bg-white/70 p-4 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:bg-pink-500"
 			>
@@ -566,7 +566,7 @@
 						d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0-2A7.5 7.5 0 0 0 0 7.5v9A7.5 7.5 0 0 0 7.5 24h9A7.5 7.5 0 0 0 24 16.5v-9A7.5 7.5 0 0 0 16.5 0h-9z"
 					></path>
 				</svg>
-			</a> -->
+			</a>
 
 			<!-- LinkedIn -->
 			<a
@@ -587,7 +587,7 @@
 
 			<!-- YouTube -->
 			<a
-				href="https://www.youtube.com/@CoreLabsDigital"
+				href="https://www.youtube.com/@HistoricalOutliers"
 				target="_blank"
 				class="group flex h-16 w-16 items-center justify-center rounded-full bg-white/70 p-4 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:bg-red-600"
 			>

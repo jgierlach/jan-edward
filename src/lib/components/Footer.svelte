@@ -41,7 +41,7 @@
 			</a>
 
 			<!-- Instagram -->
-			<a href="https://instagram.com/" target="_blank" class="group">
+			<a href="https://www.instagram.com/historical_outliers/" target="_blank" class="group">
 				<svg
 					class="h-8 w-8 text-gray-600 transition group-hover:text-pink-500 dark:text-gray-400"
 					fill="currentColor"
