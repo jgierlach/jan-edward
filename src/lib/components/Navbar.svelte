@@ -9,9 +9,15 @@
 		document.documentElement.setAttribute('data-theme', theme);
 	}
 
-	// Helper function to determine if a link is active
+	// Updated function to determine if a link is active
 	function isActive(path, hash = '') {
-		return page.url.pathname === path && (!hash || page.url.hash === hash);
+		if (hash && hash.startsWith('#')) {
+			// For hash links on the homepage
+			return page.url.pathname === path && page.url.hash === hash;
+		} else {
+			// For regular page routes like /about or /posts
+			return page.url.pathname === path;
+		}
 	}
 </script>
 
@@ -31,7 +37,7 @@
 		<a
 			href="/about"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/', 'about')}>About</a
+			class:btn-active={isActive('/about', '/about')}>About</a
 		>
 		<a
 			href="/posts"
@@ -83,7 +89,7 @@
 		<a
 			href="/about"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/', '/about')}>About</a
+			class:btn-active={isActive('/about', '/about')}>About</a
 		>
 		<a
 			href="/posts"
