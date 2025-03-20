@@ -29,9 +29,9 @@
 
 	<div class="hidden space-x-6 md:flex">
 		<a
-			href="/#about"
+			href="/about"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/', '#about')}>About</a
+			class:btn-active={isActive('/', 'about')}>About</a
 		>
 		<a
 			href="/posts"
@@ -44,7 +44,7 @@
 			class:btn-active={isActive('/', '#our-businesses')}>Our Businesses</a
 		>
 		<!-- <a
-			href="https://www.youtube.com/@CoreLabsDigital"
+			href="https://www.youtube.com/@HistoricalOutliers"
 			target="_blank"
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/blog', '/blog')}>YouTube Channel</a
@@ -81,9 +81,9 @@
 		class="absolute left-0 right-0 top-16 z-50 flex flex-col items-start bg-gradient-to-r from-blue-500 to-indigo-600 p-4 text-white shadow-md md:hidden"
 	>
 		<a
-			href="/#about"
+			href="/about"
 			class="btn btn-ghost text-white hover:text-gray-200"
-			class:btn-active={isActive('/', '#about')}>About</a
+			class:btn-active={isActive('/', '/about')}>About</a
 		>
 		<a
 			href="/posts"
@@ -96,7 +96,7 @@
 			class:btn-active={isActive('/', '#our-businesses')}>Our Businesses</a
 		>
 		<!-- <a
-			href="https://www.youtube.com/@CoreLabsDigital"
+			href="https://www.youtube.com/@HistoricalOutliers"
 			target="_blank"
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/blog', '/blog')}>YouTube Channel</a

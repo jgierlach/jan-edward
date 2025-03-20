@@ -67,7 +67,7 @@
 			</a>
 
 			<!-- YouTube -->
-			<a href="https://www.youtube.com/@CoreLabsDigital" target="_blank" class="group">
+			<a href="https://www.youtube.com/@HistoricalOutliers" target="_blank" class="group">
 				<svg
 					class="h-8 w-8 text-gray-600 transition group-hover:text-red-600 dark:text-gray-400"
 					fill="currentColor"

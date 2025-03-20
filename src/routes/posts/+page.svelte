@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog Posts | Jan-Edward</title>
+	<title>Jan-Edward | Blog Posts</title>
 	<meta
 		name="description"
 		content="Read the latest blog posts about technology, personal experiences, and interesting discoveries."
