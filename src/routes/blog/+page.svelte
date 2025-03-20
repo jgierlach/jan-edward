@@ -1,6 +1,4 @@
 <script>
-	import { getAllPosts } from '$lib/posts/utils.js';
-
 	export let data;
 </script>
 
