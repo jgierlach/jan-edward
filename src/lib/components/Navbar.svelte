@@ -43,12 +43,12 @@
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/', '#our-businesses')}>Our Businesses</a
 		>
-		<a
+		<!-- <a
 			href="https://www.youtube.com/@CoreLabsDigital"
 			target="_blank"
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/blog', '/blog')}>YouTube Channel</a
-		>
+		> -->
 		<a
 			href="/#contact"
 			class="btn btn-ghost text-white hover:text-gray-200"
@@ -95,12 +95,12 @@
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/', '#our-businesses')}>Our Businesses</a
 		>
-		<a
+		<!-- <a
 			href="https://www.youtube.com/@CoreLabsDigital"
 			target="_blank"
 			class="btn btn-ghost text-white hover:text-gray-200"
 			class:btn-active={isActive('/blog', '/blog')}>YouTube Channel</a
-		>
+		> -->
 		<a
 			href="/#contact"
 			class="btn btn-ghost text-white hover:text-gray-200"
