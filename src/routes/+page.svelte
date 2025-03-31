@@ -135,7 +135,7 @@
 				Hello 👋, my name is <span class="font-semibold text-gray-800 dark:text-white"
 					>Jan-Edward</span
 				>. I am a fullstack developer and business owner. Over the past 3 years, with my business
-				parther and a talented team, we've generated
+				partner and a talented team, we've generated
 				<span class="font-semibold text-gray-800 dark:text-white">$2.35 million</span> in revenue by
 				creating and scaling digital products and services.
 			</p>
