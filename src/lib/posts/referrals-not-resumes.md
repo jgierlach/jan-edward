@@ -11,7 +11,9 @@ How do you reliably vet and hire great people? And once you do, how do you keep 
 
 You're up against fierce competition, with many of your large competitors able to offer better salaries and benefits packages than you can.
 
-Let's start with the first challenge. How do you reliably vet and hire great people?
+Let's start with the first challenge. 
+
+### How do you reliably vet and hire great people?
 
 Yes, you can post an open position on a lot of job sites, read a lot of resumes, do a lot of interviews, and call a lot of references.
 
@@ -33,7 +35,7 @@ But we do it anyway, because short of internships, no real process for long-term
 
 It's just not possible for you to get a true sense of who someone is, nor them you, through any kind of conventional hiring process.
 
-So if the traditional hiring process isn’t reliable, how do you improve your odds of finding a great hire?
+### So if the traditional hiring process isn’t reliable, how do you improve your odds of finding a great hire?
 
 By relying on your top performers to refer and recommend candidates.
 
@@ -73,7 +75,7 @@ Contrast that with your situation: you're still doing everything you were before
 
 Because of what's at stake, if you can increase the chances of a new hire working out even slightly by it being someone you or your team already knows and endorses, then you have to do it.
 
-Once you’ve managed to hire top-tier talent with the limited resources of a small business or a cash-strapped startup, how can you get them to stay?
+### Once you’ve managed to hire top-tier talent with the limited resources of a small business or a cash-strapped startup, how can you get them to stay?
 
 According to a **[Gallup research study](https://www.gallup.com/workplace/397058/increasing-importance-best-friend-work.aspx)**, having a best friend at work is one of the biggest factors in whether someone chooses to stay or leave a job, often weighted more heavily than salary, benefits, or PTO policies.
 
