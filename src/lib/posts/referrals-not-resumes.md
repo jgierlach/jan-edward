@@ -75,7 +75,7 @@ Contrast that with your situation: you're still doing everything you were before
 
 Because of what's at stake, if you can increase the chances of a new hire working out even slightly by it being someone you or your team already knows and endorses, then you have to do it.
 
-### Once you’ve managed to hire top-tier talent with the limited resources of a small business or a cash-strapped startup, how can you get them to stay?
+### Once you’ve managed to hire top-tier talent, how can you get them to stay?
 
 According to a **[Gallup research study](https://www.gallup.com/workplace/397058/increasing-importance-best-friend-work.aspx)**, having a best friend at work is one of the biggest factors in whether someone chooses to stay or leave a job, often weighted more heavily than salary, benefits, or PTO policies.
 
