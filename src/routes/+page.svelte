@@ -213,9 +213,9 @@
 				<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
 					Online Seller Consulting
 				</h3>
-				<p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+				<!-- <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
 					Monthly Revenue: <span class="font-semibold text-gray-900 dark:text-white">$50,000</span>
-				</p>
+				</p> -->
 
 				<!-- Button -->
 				<div class="mt-6">
@@ -239,9 +239,9 @@
 					<img src="/logos/ht-logo.png" alt="Business Logo" class="h-full w-full object-cover" />
 				</div>
 				<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Hometown Industries</h3>
-				<p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+				<!-- <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
 					Monthly Revenue: <span class="font-semibold text-gray-900 dark:text-white">$330,000</span>
-				</p>
+				</p> -->
 				<div class="mt-6">
 					<a
 						href="https://www.hometown-industries.com/"
@@ -263,9 +263,9 @@
 					<img src="/logos/ht-logo.png" alt="Business Logo" class="h-full w-full object-cover" />
 				</div>
 				<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Svelte SaaS Kit</h3>
-				<p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+				<!-- <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
 					Monthly Revenue: <span class="font-semibold text-gray-900 dark:text-white">$0</span>
-				</p>
+				</p> -->
 				<div class="mt-6">
 					<a
 						href="https://www.sveltesaaskit.com/"
