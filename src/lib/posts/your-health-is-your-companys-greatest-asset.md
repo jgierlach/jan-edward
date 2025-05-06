@@ -87,7 +87,7 @@ Push your staff to problem solve more independently. Don't do the hard work for 
 
 > My clients and customers expect me to be available at all times.
 
-Unless your business operates an infrastructure which people's actual lives depend on that is wrong. What you've actually done by taking those late night calls and answering those weekend emails is create an expectation where your customers think they can have access to you at all times. Business as in life involves a need for boundaries. You'll be surprised how often those calls you've been dreading, to re-establish boundaries with a key customer or client, actually go very well. In the rare case they don't then it might be time to do one of the most liberating things in business which is to fire a shitty customer.
+Unless your business operates an infrastructure which people's health and safety depend on that is incorrect. What you've actually done by taking those late night calls and answering those weekend emails is create an expectation where your customers think they can have access to you at all times. Business as in life involves a need for boundaries. You'll be surprised how often those calls you've been dreading, to re-establish boundaries with a key customer or client, actually go very well. In the rare cases they don't, then it might be time to do one of the most liberating things in business, which is to fire a shitty customer.
 
 I could go on but you get the idea.
 
@@ -101,9 +101,7 @@ As part of owning my own business I work from home. My kitchen happens to be 40 
 
 Sleep is still very much a work in progress. I'm prone to late night moments of inspiration, which I typically indulge. But using a sleep tracker and applying better sleep hygiene habits has helped me improve steadily.
 
-Most positive and lasting change happens slowly and incrementally over time. We slowly move towards spending less and saving more. Or eating less unhealthy food and exercising more.
-
-So true is this maxim that the inverse of it is equally true. Attempted positive changes made by a person that are sudden and drastic are rarely lasting or sustainable.
+Most positive and lasting change happens slowly and incrementally over time. We slowly move towards spending less and saving more. Or eating less unhealthy food and exercising more. The inverse of this is equally true. Attempted positive changes made by a person that are sudden and drastic are rarely lasting or sustainable.
 
 You don't need to start doing CrossFit 7 days a week or try an ambitious diet for the first time. 
 
