@@ -254,7 +254,7 @@
 			</div>
 
 			<!-- Business Card -->
-			<div
+			<!-- <div
 				class="group relative rounded-3xl bg-white/70 p-8 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-900/70"
 			>
 				<div
@@ -263,9 +263,7 @@
 					<img src="/logos/ht-logo.png" alt="Business Logo" class="h-full w-full object-cover" />
 				</div>
 				<h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Svelte SaaS Kit</h3>
-				<!-- <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
-					Monthly Revenue: <span class="font-semibold text-gray-900 dark:text-white">$0</span>
-				</p> -->
+
 				<div class="mt-6">
 					<a
 						href="https://www.sveltesaaskit.com/"
@@ -275,7 +273,7 @@
 						Learn More 🔥
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
