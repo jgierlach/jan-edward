@@ -26,6 +26,11 @@ async function fetchBlogPosts() {
  * @returns {Object} Transformed blog post
  */
 function transformPost(apiPost) {
+	// Guard against null/undefined entries
+	if (!apiPost) {
+		throw new Error('Cannot transform null or undefined blog post');
+	}
+
 	// Convert markdown content to HTML
 	const html = marked(apiPost.content || '');
 
@@ -33,7 +38,8 @@ function transformPost(apiPost) {
 	const date = apiPost.published_date ? new Date(apiPost.published_date) : new Date();
 
 	// Extract description from meta_description or generate from content
-	const description = apiPost.meta_description || 
+	const description =
+		apiPost.meta_description ||
 		(apiPost.content ? apiPost.content.substring(0, 200).replace(/\n/g, ' ').trim() + '...' : '');
 
 	return {
@@ -58,6 +64,7 @@ function transformPost(apiPost) {
 export async function getAllPosts() {
 	const posts = await fetchBlogPosts();
 	return posts
+		.filter(Boolean) // Filter out null, undefined, or falsy entries
 		.map(transformPost)
 		.sort((a, b) => {
 			const dateA = a.date instanceof Date ? a.date : new Date(0);
