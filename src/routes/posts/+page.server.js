@@ -1,7 +1,7 @@
 import { getAllPosts } from '$lib/posts/utils';
 
-export function load() {
-	const posts = getAllPosts();
+export async function load() {
+	const posts = await getAllPosts();
 
 	return {
 		posts

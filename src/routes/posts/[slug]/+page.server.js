@@ -1,9 +1,9 @@
 import { getPost } from '$lib/posts/utils';
 import { error } from '@sveltejs/kit';
 
-export function load({ params }) {
+export async function load({ params }) {
 	try {
-		const post = getPost(params.slug);
+		const post = await getPost(params.slug);
 
 		return {
 			post

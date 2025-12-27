@@ -1,182 +1,104 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import { marked } from 'marked';
 
-export function getAllPosts() {
-	const files = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+const API_URL = 'https://api.corelabs.digital/blog-posts/5244b628-4ece-45d0-8746-87286c5e69c4';
 
-	console.log('Bundled Posts:', files);
+/**
+ * Fetches all blog posts from the API
+ * @returns {Promise<Array>} Array of blog posts
+ */
+async function fetchBlogPosts() {
+	try {
+		const response = await fetch(API_URL);
+		if (!response.ok) {
+			throw new Error(`Failed to fetch blog posts: ${response.status} ${response.statusText}`);
+		}
+		const data = await response.json();
+		return data.blogPosts || [];
+	} catch (error) {
+		console.error('Error fetching blog posts:', error);
+		throw error;
+	}
+}
 
-	return Object.entries(files)
-		.map(([filePath, file]) => {
-			// Ensure file has a default export
-			if (!file || !file.default) {
-				console.error(`Skipping ${filePath} due to missing default export`);
-				return null;
-			}
+/**
+ * Transforms API blog post data to match the expected format
+ * @param {Object} apiPost - Blog post from API
+ * @returns {Object} Transformed blog post
+ */
+function transformPost(apiPost) {
+	// Convert markdown content to HTML
+	const html = marked(apiPost.content || '');
 
-			const slug = filePath.split('/').pop().replace('.md', '');
-			console.log(`Processing ${slug} with default:`, file.default);
+	// Parse published date
+	const date = apiPost.published_date ? new Date(apiPost.published_date) : new Date();
 
-			try {
-				let content;
+	// Extract description from meta_description or generate from content
+	const description = apiPost.meta_description || 
+		(apiPost.content ? apiPost.content.substring(0, 200).replace(/\n/g, ' ').trim() + '...' : '');
 
-				// If default is a file path (like in local dev)
-				if (typeof file.default === 'string' && file.default.startsWith('/src/lib/posts/')) {
-					try {
-						// Try reading the file from the filesystem (for local dev)
-						const localPath = path.resolve(file.default.slice(1)); // Remove leading slash
-						content = fs.readFileSync(localPath, 'utf-8');
-						console.log(`Read content from local file: ${localPath}`);
-					} catch (fsError) {
-						console.error(`Could not read local file: ${fsError.message}`);
-						// If we can't read the file, the content might be inlined in the module
-						if (file.default.includes('base64,')) {
-							const base64Content = file.default.split('base64,')[1];
-							content = Buffer.from(base64Content, 'base64').toString('utf-8');
-							console.log(`Extracted content from base64 data URL`);
-						} else {
-							// If file.metadata exists, use that
-							if (file.metadata && file.metadata.frontmatter) {
-								content = file.metadata.frontmatter;
-								console.log(`Using metadata from module`);
-							} else {
-								throw new Error(`Could not extract content for ${slug}`);
-							}
-						}
-					}
-				}
-				// If default is a base64 data URL (like in production)
-				else if (typeof file.default === 'string' && file.default.includes('base64,')) {
-					const base64Content = file.default.split('base64,')[1];
-					content = Buffer.from(base64Content, 'base64').toString('utf-8');
-					console.log(`Extracted content from base64 data URL`);
-				}
-				// If content is directly available in the module
-				else if (file.metadata && file.metadata.frontmatter) {
-					content = file.metadata.frontmatter;
-					console.log(`Using metadata from module`);
-				}
-				// Fallback - try to use default directly
-				else {
-					content = file.default;
-					console.log(`Using default directly`);
-				}
+	return {
+		slug: apiPost.slug,
+		html,
+		title: apiPost.title,
+		date,
+		description,
+		headerImage: apiPost.featured_image,
+		metaTitle: apiPost.meta_title,
+		metaDescription: apiPost.meta_description,
+		id: apiPost.id,
+		createdAt: apiPost.created_at,
+		updatedAt: apiPost.updated_at
+	};
+}
 
-				// Check if content was successfully retrieved
-				if (!content) {
-					throw new Error(`Could not extract content for ${slug}`);
-				}
-
-				console.log(
-					`Content preview: ${typeof content === 'string' ? content.substring(0, 50) + '...' : 'Non-string content'}`
-				);
-
-				// Process the content with gray-matter
-				const { data, content: markdown } = matter(content);
-				console.log(`Extracted frontmatter:`, data);
-
-				// Create a date object from the date string
-				const date = data.date ? new Date(data.date) : new Date();
-
-				// Convert markdown to HTML
-				const html = marked(markdown);
-
-				return {
-					slug,
-					html,
-					...data,
-					date
-				};
-			} catch (error) {
-				console.error(`Error processing ${slug}:`, error);
-				console.error(error.stack);
-				// Return a minimal object for debugging
-				return {
-					slug,
-					html: `<pre>Error processing markdown: ${error.message}</pre>`,
-					title: `Error: ${slug}`,
-					date: new Date(),
-					errorDetails: error.message
-				};
-			}
-		})
-		.filter(Boolean)
+/**
+ * Gets all blog posts from the API
+ * @returns {Promise<Array>} Array of transformed blog posts, sorted by date (newest first)
+ */
+export async function getAllPosts() {
+	const posts = await fetchBlogPosts();
+	return posts
+		.map(transformPost)
 		.sort((a, b) => {
-			// Safely compare dates
 			const dateA = a.date instanceof Date ? a.date : new Date(0);
 			const dateB = b.date instanceof Date ? b.date : new Date(0);
 			return dateB - dateA;
 		});
 }
 
-export function getPost(slug) {
-	const files = import.meta.glob('/src/lib/posts/*.md', { eager: true });
-	const filePath = Object.keys(files).find((path) => path.endsWith(`${slug}.md`));
+/**
+ * Fetches a single blog post by slug from the API
+ * @param {string} slug - The slug of the post to retrieve
+ * @returns {Promise<Object>} The blog post from API
+ */
+async function fetchBlogPost(slug) {
+	try {
+		const response = await fetch(`${API_URL}/${slug}`);
+		if (!response.ok) {
+			if (response.status === 404) {
+				throw new Error(`Post with slug "${slug}" not found`);
+			}
+			throw new Error(`Failed to fetch blog post: ${response.status} ${response.statusText}`);
+		}
+		const data = await response.json();
+		return data.blogPost;
+	} catch (error) {
+		console.error(`Error fetching blog post "${slug}":`, error);
+		throw error;
+	}
+}
 
-	if (!filePath || !files[filePath] || !files[filePath].default) {
+/**
+ * Gets a single blog post by slug
+ * @param {string} slug - The slug of the post to retrieve
+ * @returns {Promise<Object>} The transformed blog post
+ */
+export async function getPost(slug) {
+	const post = await fetchBlogPost(slug);
+
+	if (!post) {
 		throw new Error(`Post with slug "${slug}" not found`);
 	}
 
-	const file = files[filePath];
-
-	try {
-		let content;
-
-		// If default is a file path (like in local dev)
-		if (typeof file.default === 'string' && file.default.startsWith('/src/lib/posts/')) {
-			try {
-				// Try reading the file from the filesystem (for local dev)
-				const localPath = path.resolve(file.default.slice(1)); // Remove leading slash
-				content = fs.readFileSync(localPath, 'utf-8');
-			} catch (fsError) {
-				console.error(`Could not read local file: ${fsError.message}`);
-				// If we can't read the file, the content might be inlined in the module
-				if (file.default.includes('base64,')) {
-					const base64Content = file.default.split('base64,')[1];
-					content = Buffer.from(base64Content, 'base64').toString('utf-8');
-				} else {
-					// If file.metadata exists, use that
-					if (file.metadata && file.metadata.frontmatter) {
-						content = file.metadata.frontmatter;
-					} else {
-						throw new Error(`Could not extract content for ${slug}`);
-					}
-				}
-			}
-		}
-		// If default is a base64 data URL (like in production)
-		else if (typeof file.default === 'string' && file.default.includes('base64,')) {
-			const base64Content = file.default.split('base64,')[1];
-			content = Buffer.from(base64Content, 'base64').toString('utf-8');
-		}
-		// If content is directly available in the module
-		else if (file.metadata && file.metadata.frontmatter) {
-			content = file.metadata.frontmatter;
-		}
-		// Fallback - try to use default directly
-		else {
-			content = file.default;
-		}
-
-		// Process the content with gray-matter
-		const { data, content: markdown } = matter(content);
-
-		// Create a date object from the date string
-		const date = data.date ? new Date(data.date) : new Date();
-
-		// Convert markdown to HTML
-		const html = marked(markdown);
-
-		return {
-			slug,
-			html,
-			...data,
-			date
-		};
-	} catch (error) {
-		console.error(`Error processing post ${slug}:`, error);
-		throw error;
-	}
+	return transformPost(post);
 }
